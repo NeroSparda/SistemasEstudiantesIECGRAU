@@ -1,0 +1,10 @@
+C:\Users\Usuario\source\repos\Trilce\Trilce\bin\Debug\Trilce.exe.config
+C:\Users\Usuario\source\repos\Trilce\Trilce\bin\Debug\Trilce.exe
+C:\Users\Usuario\source\repos\Trilce\Trilce\bin\Debug\Trilce.pdb
+C:\Users\Usuario\source\repos\Trilce\Trilce\obj\Debug\Trilce.csprojAssemblyReference.cache
+C:\Users\Usuario\source\repos\Trilce\Trilce\obj\Debug\Trilce.Form1.resources
+C:\Users\Usuario\source\repos\Trilce\Trilce\obj\Debug\Trilce.Properties.Resources.resources
+C:\Users\Usuario\source\repos\Trilce\Trilce\obj\Debug\Trilce.csproj.GenerateResource.cache
+C:\Users\Usuario\source\repos\Trilce\Trilce\obj\Debug\Trilce.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\Trilce\Trilce\obj\Debug\Trilce.exe
+C:\Users\Usuario\source\repos\Trilce\Trilce\obj\Debug\Trilce.pdb
