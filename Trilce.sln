@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trilce", "Trilce\Trilce.csproj", "{A583D9AA-7F7E-4DCC-9A6F-89C7BDF7BCAF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{721B3A7D-4716-4DD1-BDEB-9B819BC4868A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logica", "Logica\Logica.csproj", "{B9CBA0FA-A2D8-409C-8710-6BF76B65EAF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{A583D9AA-7F7E-4DCC-9A6F-89C7BDF7BCAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A583D9AA-7F7E-4DCC-9A6F-89C7BDF7BCAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A583D9AA-7F7E-4DCC-9A6F-89C7BDF7BCAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{721B3A7D-4716-4DD1-BDEB-9B819BC4868A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{721B3A7D-4716-4DD1-BDEB-9B819BC4868A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{721B3A7D-4716-4DD1-BDEB-9B819BC4868A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{721B3A7D-4716-4DD1-BDEB-9B819BC4868A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9CBA0FA-A2D8-409C-8710-6BF76B65EAF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9CBA0FA-A2D8-409C-8710-6BF76B65EAF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9CBA0FA-A2D8-409C-8710-6BF76B65EAF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9CBA0FA-A2D8-409C-8710-6BF76B65EAF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
