@@ -1,0 +1,13 @@
+C:\Users\sistemas13\Desktop\Zero\grau\Trilce\bin\Debug\Trilce.exe.config
+C:\Users\sistemas13\Desktop\Zero\grau\Trilce\bin\Debug\Trilce.exe
+C:\Users\sistemas13\Desktop\Zero\grau\Trilce\bin\Debug\Trilce.pdb
+C:\Users\sistemas13\Desktop\Zero\grau\Trilce\bin\Debug\Logica.dll
+C:\Users\sistemas13\Desktop\Zero\grau\Trilce\bin\Debug\Logica.pdb
+C:\Users\sistemas13\Desktop\Zero\grau\Trilce\obj\Debug\Estudiantes.csprojAssemblyReference.cache
+C:\Users\sistemas13\Desktop\Zero\grau\Trilce\obj\Debug\Trilce.Form1.resources
+C:\Users\sistemas13\Desktop\Zero\grau\Trilce\obj\Debug\Trilce.Properties.Resources.resources
+C:\Users\sistemas13\Desktop\Zero\grau\Trilce\obj\Debug\Estudiantes.csproj.GenerateResource.cache
+C:\Users\sistemas13\Desktop\Zero\grau\Trilce\obj\Debug\Estudiantes.csproj.CoreCompileInputs.cache
+C:\Users\sistemas13\Desktop\Zero\grau\Trilce\obj\Debug\Estudiantes.csproj.CopyComplete
+C:\Users\sistemas13\Desktop\Zero\grau\Trilce\obj\Debug\Trilce.exe
+C:\Users\sistemas13\Desktop\Zero\grau\Trilce\obj\Debug\Trilce.pdb

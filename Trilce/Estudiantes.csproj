@@ -92,5 +92,11 @@
   <ItemGroup>
     <None Include="Resources\Logo-de-Git.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logica\Logica.csproj">
+      <Project>{b9cba0fa-a2d8-409c-8710-6bf76b65eaf1}</Project>
+      <Name>Logica</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
