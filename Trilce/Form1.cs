@@ -13,10 +13,16 @@ namespace Trilce
 {
     public partial class Form1 : Form
     {
-        private LEstudiantes estudiante = new LEstudiantes();
+        private LEstudiantes estudiante;
         public Form1()
         {
             InitializeComponent();
+            var listTextBox = new List<TextBox>();
+            listTextBox.Add(textBoxId);
+            listTextBox.Add(textBoxNombre);
+            listTextBox.Add(textBoxApellido);
+            listTextBox.Add(textBoxEmail);
+            estudiante = new LEstudiantes(listTextBox);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -96,12 +102,17 @@ namespace Trilce
 
         private void TextBoxApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            estudiante.textBoxEvent.TextKeyPress(e);
         }
 
         private void TextBoxNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             estudiante.textBoxEvent.TextKeyPress(e);
+        }
+
+        private void TextBoxNid_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            estudiante.textBoxEvent.numberKeyPress(e);
         }
     }
 }

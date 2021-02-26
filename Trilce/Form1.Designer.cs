@@ -71,7 +71,6 @@ namespace Trilce
             this.groupBox1.Size = new System.Drawing.Size(882, 67);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            
             // 
             // label1
             // 
@@ -87,7 +86,6 @@ namespace Trilce
             this.label1.TabIndex = 0;
             this.label1.Text = "Registro EAP";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-          
             // 
             // groupBox2
             // 
@@ -130,7 +128,7 @@ namespace Trilce
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(142, 28);
             this.textBoxId.TabIndex = 13;
-            this.textBoxId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxNid);
+            this.textBoxId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxNid_KeyPress);
             // 
             // buttonEliminar
             // 
@@ -202,7 +200,6 @@ namespace Trilce
             this.labelNombre.Size = new System.Drawing.Size(44, 13);
             this.labelNombre.TabIndex = 6;
             this.labelNombre.Text = "Nombre";
-       
             // 
             // labelApellido
             // 
@@ -213,7 +210,6 @@ namespace Trilce
             this.labelApellido.Size = new System.Drawing.Size(44, 13);
             this.labelApellido.TabIndex = 3;
             this.labelApellido.Text = "Apellido";
-          
             // 
             // labelNid
             // 
@@ -224,7 +220,6 @@ namespace Trilce
             this.labelNid.Size = new System.Drawing.Size(23, 13);
             this.labelNid.TabIndex = 2;
             this.labelNid.Text = "Nid";
-           
             // 
             // groupBox5
             // 
@@ -255,7 +250,6 @@ namespace Trilce
             this.label3.Size = new System.Drawing.Size(132, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Información del Estudiante";
-            
             // 
             // groupBox3
             // 
@@ -305,7 +299,6 @@ namespace Trilce
             this.label9.Size = new System.Drawing.Size(115, 27);
             this.label9.TabIndex = 2;
             this.label9.Text = "Estudiante";
-            
             // 
             // textBox1
             // 
@@ -314,7 +307,6 @@ namespace Trilce
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(144, 20);
             this.textBox1.TabIndex = 1;
-            
             // 
             // label2
             // 
@@ -326,7 +318,6 @@ namespace Trilce
             this.label2.Size = new System.Drawing.Size(60, 21);
             this.label2.TabIndex = 0;
             this.label2.Text = "Buscar";
-
             // 
             // Form1
             // 
