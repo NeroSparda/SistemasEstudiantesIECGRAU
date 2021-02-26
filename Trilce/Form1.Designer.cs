@@ -32,6 +32,7 @@ namespace Trilce
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBoxApellido = new System.Windows.Forms.TextBox();
             this.textBoxId = new System.Windows.Forms.TextBox();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
@@ -51,7 +52,6 @@ namespace Trilce
             this.label9 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxApellido = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -71,7 +71,7 @@ namespace Trilce
             this.groupBox1.Size = new System.Drawing.Size(882, 67);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            
             // 
             // label1
             // 
@@ -81,13 +81,13 @@ namespace Trilce
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(203, 18);
+            this.label1.Location = new System.Drawing.Point(350, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(505, 30);
+            this.label1.Size = new System.Drawing.Size(139, 30);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Sistema de Estudiantes IEC Almirante Miguel Grau";
+            this.label1.Text = "Registro EAP";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+          
             // 
             // groupBox2
             // 
@@ -112,7 +112,16 @@ namespace Trilce
             this.groupBox2.Size = new System.Drawing.Size(337, 505);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // textBoxApellido
+            // 
+            this.textBoxApellido.Location = new System.Drawing.Point(6, 273);
+            this.textBoxApellido.Multiline = true;
+            this.textBoxApellido.Name = "textBoxApellido";
+            this.textBoxApellido.Size = new System.Drawing.Size(142, 28);
+            this.textBoxApellido.TabIndex = 14;
+            this.textBoxApellido.TextChanged += new System.EventHandler(this.textBoxApellido_TextChanged);
+            this.textBoxApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxApellido_KeyPress);
             // 
             // textBoxId
             // 
@@ -121,7 +130,6 @@ namespace Trilce
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(142, 28);
             this.textBoxId.TabIndex = 13;
-            this.textBoxId.TextChanged += new System.EventHandler(this.TextBoxNid);
             this.textBoxId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxNid);
             // 
             // buttonEliminar
@@ -174,7 +182,6 @@ namespace Trilce
             this.labelEmail.Size = new System.Drawing.Size(32, 13);
             this.labelEmail.TabIndex = 8;
             this.labelEmail.Text = "Email";
-            this.labelEmail.Click += new System.EventHandler(this.label8_Click);
             // 
             // textBoxNombre
             // 
@@ -195,7 +202,7 @@ namespace Trilce
             this.labelNombre.Size = new System.Drawing.Size(44, 13);
             this.labelNombre.TabIndex = 6;
             this.labelNombre.Text = "Nombre";
-            this.labelNombre.Click += new System.EventHandler(this.label7_Click);
+       
             // 
             // labelApellido
             // 
@@ -206,7 +213,7 @@ namespace Trilce
             this.labelApellido.Size = new System.Drawing.Size(44, 13);
             this.labelApellido.TabIndex = 3;
             this.labelApellido.Text = "Apellido";
-            this.labelApellido.Click += new System.EventHandler(this.label6_Click);
+          
             // 
             // labelNid
             // 
@@ -217,7 +224,7 @@ namespace Trilce
             this.labelNid.Size = new System.Drawing.Size(23, 13);
             this.labelNid.TabIndex = 2;
             this.labelNid.Text = "Nid";
-            this.labelNid.Click += new System.EventHandler(this.label5_Click);
+           
             // 
             // groupBox5
             // 
@@ -248,7 +255,7 @@ namespace Trilce
             this.label3.Size = new System.Drawing.Size(132, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Información del Estudiante";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            
             // 
             // groupBox3
             // 
@@ -298,7 +305,7 @@ namespace Trilce
             this.label9.Size = new System.Drawing.Size(115, 27);
             this.label9.TabIndex = 2;
             this.label9.Text = "Estudiante";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            
             // 
             // textBox1
             // 
@@ -307,7 +314,7 @@ namespace Trilce
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(144, 20);
             this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            
             // 
             // label2
             // 
@@ -319,17 +326,7 @@ namespace Trilce
             this.label2.Size = new System.Drawing.Size(60, 21);
             this.label2.TabIndex = 0;
             this.label2.Text = "Buscar";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // textBoxApellido
-            // 
-            this.textBoxApellido.Location = new System.Drawing.Point(6, 273);
-            this.textBoxApellido.Multiline = true;
-            this.textBoxApellido.Name = "textBoxApellido";
-            this.textBoxApellido.Size = new System.Drawing.Size(142, 28);
-            this.textBoxApellido.TabIndex = 14;
-            this.textBoxApellido.TextChanged += new System.EventHandler(this.textBoxApellido_TextChanged);
-            this.textBoxApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxApellido_KeyPress);
+
             // 
             // Form1
             // 

@@ -24,87 +24,14 @@ namespace Trilce
 
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
        
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void PictureBoxImage(object sender, EventArgs e)
         {
-            estudiante.CargarImagen(pictureBoxImage);
+            estudiante.uploadImage.CargarImagen(pictureBoxImage);
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TextBoxNid(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void TextBoxNid(object sender, KeyPressEventArgs e)
         {
@@ -174,7 +101,7 @@ namespace Trilce
 
         private void TextBoxNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            estudiante.textBoxEvent.TextKeyPress(e);
         }
     }
 }
