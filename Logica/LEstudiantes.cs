@@ -13,10 +13,12 @@ namespace Logica
     {
         private List<TextBox> listTextBox;
         private List<Label> listLabel;
-        public LEstudiantes(List<TextBox> listTextBox, List<Label> listLabel)
+        private PictureBox image;
+        public LEstudiantes(List<TextBox> listTextBox, List<Label> listLabel, object[] objectos)
         {
             this.listTextBox = listTextBox;
             this.listLabel = listLabel;
+            image = (PictureBox)objectos[0];
         }
 
         public void Registrar()
@@ -50,6 +52,19 @@ namespace Logica
                             listLabel[3].Text = "El campo email es requerido";
                             listLabel[3].ForeColor = Color.Red;
                             listLabel[3].Focus();
+                        }
+                        else
+                        {
+                            if(textBoxEvent.comprobarFormatoEmail(listTextBox[3].Text))
+                            {
+                               var imagenArray= uploadImage.ImageToByte(image.Image);
+                            }
+                            else
+                            {
+                                listLabel[3].Text = "El campo email no es valido";
+                                listLabel[3].ForeColor = Color.Red;
+                                listLabel[3].Focus();
+                            }
                         }
                     }
                 }

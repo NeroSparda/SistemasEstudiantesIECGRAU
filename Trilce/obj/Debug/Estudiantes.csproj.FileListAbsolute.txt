@@ -11,3 +11,4 @@ C:\Users\sistemas13\Desktop\Zero\grau\Trilce\obj\Debug\Estudiantes.csproj.CoreCo
 C:\Users\sistemas13\Desktop\Zero\grau\Trilce\obj\Debug\Estudiantes.csproj.CopyComplete
 C:\Users\sistemas13\Desktop\Zero\grau\Trilce\obj\Debug\Trilce.exe
 C:\Users\sistemas13\Desktop\Zero\grau\Trilce\obj\Debug\Trilce.pdb
+C:\Users\sistemas13\Desktop\Zero\grau\Trilce\bin\Debug\System.ComponentModel.Annotations.dll

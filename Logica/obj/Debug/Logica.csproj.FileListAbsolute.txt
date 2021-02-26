@@ -4,3 +4,5 @@ C:\Users\sistemas13\Desktop\Zero\grau\Logica\obj\Debug\Logica.csprojAssemblyRefe
 C:\Users\sistemas13\Desktop\Zero\grau\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
 C:\Users\sistemas13\Desktop\Zero\grau\Logica\obj\Debug\Logica.dll
 C:\Users\sistemas13\Desktop\Zero\grau\Logica\obj\Debug\Logica.pdb
+C:\Users\sistemas13\Desktop\Zero\grau\Logica\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\sistemas13\Desktop\Zero\grau\Logica\obj\Debug\Logica.csproj.CopyComplete

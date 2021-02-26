@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 using System.Windows.Forms;
 
 namespace Logica.Library
@@ -58,8 +59,13 @@ namespace Logica.Library
             }
             else
             {
+                
                 e.Handled = true;
             }
+        }
+        public bool comprobarFormatoEmail(string email)
+        {
+            return new  EmailAddressAttribute().IsValid(email);
         }
     }
 }

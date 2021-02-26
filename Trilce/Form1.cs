@@ -27,7 +27,8 @@ namespace Trilce
             listLabel.Add(labelNombre);
             listLabel.Add(labelApellido);
             listLabel.Add(labelEmail);
-            estudiante = new LEstudiantes(listTextBox,listLabel);
+            Object[] objectos = { pictureBoxImage };
+            estudiante = new LEstudiantes(listTextBox,listLabel,objectos);
         }
 
         private void Form1_Load(object sender, EventArgs e)
