@@ -22,7 +22,12 @@ namespace Trilce
             listTextBox.Add(textBoxNombre);
             listTextBox.Add(textBoxApellido);
             listTextBox.Add(textBoxEmail);
-            estudiante = new LEstudiantes(listTextBox);
+            var listLabel = new List<Label>();
+            listLabel.Add(labelNid);
+            listLabel.Add(labelNombre);
+            listLabel.Add(labelApellido);
+            listLabel.Add(labelEmail);
+            estudiante = new LEstudiantes(listTextBox,listLabel);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -37,9 +42,9 @@ namespace Trilce
             estudiante.uploadImage.CargarImagen(pictureBoxImage);
         }
 
-       
 
-        private void TextBoxNid(object sender, KeyPressEventArgs e)
+        
+        private void TextBoxNid_TextChanged(object sender, EventArgs e)
         {
             if (textBoxId.Text.Equals(""))
             {
@@ -114,5 +119,12 @@ namespace Trilce
         {
             estudiante.textBoxEvent.numberKeyPress(e);
         }
+
+        private void ButtonAgregar_Click(object sender, EventArgs e)
+        {
+            estudiante.Registrar();
+        }
+
+        
     }
 }

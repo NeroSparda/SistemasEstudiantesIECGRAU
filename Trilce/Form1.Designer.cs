@@ -128,6 +128,7 @@ namespace Trilce
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(142, 28);
             this.textBoxId.TabIndex = 13;
+            this.textBoxId.TextChanged += new System.EventHandler(this.TextBoxNid_TextChanged);
             this.textBoxId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxNid_KeyPress);
             // 
             // buttonEliminar
@@ -160,6 +161,7 @@ namespace Trilce
             this.buttonAgregar.Size = new System.Drawing.Size(84, 42);
             this.buttonAgregar.TabIndex = 10;
             this.buttonAgregar.UseVisualStyleBackColor = false;
+            this.buttonAgregar.Click += new System.EventHandler(this.ButtonAgregar_Click);
             // 
             // textBoxEmail
             // 
