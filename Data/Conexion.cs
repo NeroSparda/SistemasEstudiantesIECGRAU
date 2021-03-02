@@ -1,4 +1,5 @@
-﻿using LinqToDB.Data;
+﻿using LinqToDB;
+using LinqToDB.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace Data
     public class Conexion: DataConnection
     {
         public Conexion(): base("Prueba") { }
+        public ITable<estudiante> _Estudiante { get { return GetTable<estudiante>(); } }
     }
 }
