@@ -11,18 +11,23 @@ using System.Windows.Forms;
 
 namespace Logica
 {
-    public class LEstudiantes: Conexion
+    public class LEstudiantes: Librarys
     {
         private List<TextBox> listTextBox;
         private List<Label> listLabel;
         private PictureBox image;
-        private Librarys librarys;
+        private Bitmap _imagBitmap;
+        private DataGridView _dataGridView;
+        //private Librarys librarys;
         public LEstudiantes(List<TextBox> listTextBox, List<Label> listLabel, object[] objectos)
         {
             this.listTextBox = listTextBox;
             this.listLabel = listLabel;
-            librarys = new Librarys();
+            //librarys = new Librarys();
             image = (PictureBox)objectos[0];
+            _imagBitmap = (Bitmap)objectos[1];
+            _dataGridView = (DataGridView)objectos[2];
+            Restablecer();//Vacia y muestra valores en la tabla al abrirla
         }
 
         public void Registrar()
@@ -59,21 +64,32 @@ namespace Logica
                         }
                         else
                         {
-                            if(librarys.textBoxEvent.comprobarFormatoEmail(listTextBox[3].Text))
+                            if(textBoxEvent.comprobarFormatoEmail(listTextBox[3].Text))
                             {
-                               var imagenArray= librarys.uploadImage.ImageToByte(image.Image);
-                                using (var db = new Conexion())
-                                {
-                                    db.Insert(new estudiante()
-                                    {
-                                        nid = listTextBox[0].Text,
-                                        nombre = listTextBox[1].Text,
-                                        apellido = listTextBox[2].Text,
-                                        email = listTextBox[3].Text
+                                //using (var db = new Conexion())
+                                //{
+                                //    db.Insert(new estudiante()
+                                //    {
+                                //        nid = listTextBox[0].Text,
+                                //        nombre = listTextBox[1].Text,
+                                //        apellido = listTextBox[2].Text,
+                                //        email = listTextBox[3].Text
 
-                                    });
+                                //    });
+                                //}
+                                //------------Procedimiento 2daForma-------------
+                                ///Verificar datos en un email//
+                                var user = _Estudiante.Where(u => u.email.Equals(listTextBox[3].Text)).ToList();
+                                ///---------------------------------------------
+                                if (user.Count.Equals(0))
+                                {
+                                    Save();
+                                }else
+                                {
+                                    listLabel[3].Text = "Email ya registrado";
+                                    listLabel[3].ForeColor = Color.Red;
+                                    listLabel[3].Focus();
                                 }
-                                    
                             }
                             else
                             {
@@ -85,6 +101,89 @@ namespace Logica
                     }
                 }
             }
+        }
+        private void Save()
+        {
+            BeginTransactionAsync();
+            try
+            {
+                var imagenArray = uploadImage.ImageToByte(image.Image);
+
+                _Estudiante.Value(e => e.nid, listTextBox[0].Text)
+                .Value(e => e.nombre, listTextBox[1].Text)
+                .Value(e => e.apellido, listTextBox[2].Text)
+                .Value(e => e.email, listTextBox[3].Text)
+                .Value(e => e.image, imagenArray)
+                .Insert();
+
+                CommitTransaction();
+                Restablecer();
+            }
+            catch (Exception)
+            {
+                RollbackTransaction();
+
+            }
+        }
+        private int _reg_por_pagina = 2, _num_pagina = 1;
+        public void SearchEstudiante(String campo)
+        {
+            List<estudiante> query = new List<estudiante>();
+            int inicio = (_num_pagina - 1) * _reg_por_pagina;
+            if(campo.Equals(""))
+            {
+                query = _Estudiante.ToList();
+            }
+            else
+            {
+                query = _Estudiante.Where(c => c.nid.StartsWith(campo) || c.nombre.StartsWith(campo)
+                || c.apellido.StartsWith(campo)).ToList();
+            }
+            if(0 < query.Count)
+            {
+                _dataGridView.DataSource = query.Select(c => new
+                {
+                    c.id,
+                    c.nid,
+                    c.nombre,
+                    c.apellido,
+                    c.email
+                }).Skip(inicio).Take(_reg_por_pagina).ToList();
+                _dataGridView.Columns[0].Visible = false;
+
+                _dataGridView.Columns[1].DefaultCellStyle.BackColor = Color.WhiteSmoke;
+                _dataGridView.Columns[3].DefaultCellStyle.BackColor = Color.WhiteSmoke;
+
+            }
+            else
+            {
+                _dataGridView.DataSource = query.Select(c => new
+                {
+                    c.id,
+                    c.nid,
+                    c.nombre,
+                    c.apellido,
+                    c.email
+                }).Skip(inicio).Take(_reg_por_pagina).ToList();
+            }
+        }
+        private void Restablecer()
+        {
+            image.Image = _imagBitmap;
+            listLabel[0].Text = "Nid";
+            listLabel[1].Text = "Nombre";
+            listLabel[2].Text = "Apellido";
+            listLabel[3].Text = "Email";
+            listLabel[0].ForeColor = Color.LightSlateGray;
+            listLabel[1].ForeColor = Color.LightSlateGray;
+            listLabel[2].ForeColor = Color.LightSlateGray;
+            listLabel[3].ForeColor = Color.LightSlateGray;
+            listTextBox[0].Text = "";
+            listTextBox[1].Text = "";
+            listTextBox[2].Text = "";
+            listTextBox[3].Text = "";
+            SearchEstudiante("");
+
         }
     }      
 }

@@ -16,11 +16,11 @@ namespace Trilce
     public partial class Form1 : Form
     {
         private LEstudiantes estudiante;
-        private Librarys librarys;
+        //private Librarys librarys;
         public Form1()
         {
             InitializeComponent();
-            librarys = new Librarys();
+            //librarys = new Librarys();
             var listTextBox = new List<TextBox>();
             listTextBox.Add(textBoxId);
             listTextBox.Add(textBoxNombre);
@@ -31,7 +31,11 @@ namespace Trilce
             listLabel.Add(labelNombre);
             listLabel.Add(labelApellido);
             listLabel.Add(labelEmail);
-            Object[] objectos = { pictureBoxImage };
+            Object[] objectos = { 
+                pictureBoxImage,
+                Properties.Resources.Logo_de_Git,
+                dataGridView1
+            };
             estudiante = new LEstudiantes(listTextBox,listLabel,objectos);
         }
 
@@ -44,7 +48,7 @@ namespace Trilce
 
         private void PictureBoxImage(object sender, EventArgs e)
         {
-            librarys.uploadImage.CargarImagen(pictureBoxImage);
+            estudiante.uploadImage.CargarImagen(pictureBoxImage);
         }
 
 
@@ -112,17 +116,17 @@ namespace Trilce
 
         private void TextBoxApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            librarys.textBoxEvent.TextKeyPress(e);
+            estudiante.textBoxEvent.TextKeyPress(e);
         }
 
         private void TextBoxNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            librarys.textBoxEvent.TextKeyPress(e);
+            estudiante.textBoxEvent.TextKeyPress(e);
         }
 
         private void TextBoxNid_KeyPress(object sender, KeyPressEventArgs e)
         {
-            librarys.textBoxEvent.numberKeyPress(e);
+            estudiante.textBoxEvent.numberKeyPress(e);
         }
 
         private void ButtonAgregar_Click(object sender, EventArgs e)
@@ -130,6 +134,9 @@ namespace Trilce
             estudiante.Registrar();
         }
 
-        
+        private void textBoxBuscar_TextChanged(object sender, EventArgs e)
+        {
+            estudiante.SearchEstudiante(textBoxBuscar.Text);
+        }
     }
 }
