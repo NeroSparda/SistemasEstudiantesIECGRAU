@@ -1,4 +1,6 @@
-﻿using Logica.Library;
+﻿using Data;
+using LinqToDB;
+using Logica.Library;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -9,15 +11,17 @@ using System.Windows.Forms;
 
 namespace Logica
 {
-    public class LEstudiantes: Librarys
+    public class LEstudiantes: Conexion
     {
         private List<TextBox> listTextBox;
         private List<Label> listLabel;
         private PictureBox image;
+        private Librarys librarys;
         public LEstudiantes(List<TextBox> listTextBox, List<Label> listLabel, object[] objectos)
         {
             this.listTextBox = listTextBox;
             this.listLabel = listLabel;
+            librarys = new Librarys();
             image = (PictureBox)objectos[0];
         }
 
@@ -55,9 +59,21 @@ namespace Logica
                         }
                         else
                         {
-                            if(textBoxEvent.comprobarFormatoEmail(listTextBox[3].Text))
+                            if(librarys.textBoxEvent.comprobarFormatoEmail(listTextBox[3].Text))
                             {
-                               var imagenArray= uploadImage.ImageToByte(image.Image);
+                               var imagenArray= librarys.uploadImage.ImageToByte(image.Image);
+                                using (var db = new Conexion())
+                                {
+                                    db.Insert(new estudiante()
+                                    {
+                                        nid = listTextBox[0].Text,
+                                        nombre = listTextBox[1].Text,
+                                        apellido = listTextBox[2].Text,
+                                        email = listTextBox[3].Text
+
+                                    });
+                                }
+                                    
                             }
                             else
                             {

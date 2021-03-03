@@ -8,15 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logica;
+using Data;
+using Logica.Library;
 
 namespace Trilce
 {
     public partial class Form1 : Form
     {
         private LEstudiantes estudiante;
+        private Librarys librarys;
         public Form1()
         {
             InitializeComponent();
+            librarys = new Librarys();
             var listTextBox = new List<TextBox>();
             listTextBox.Add(textBoxId);
             listTextBox.Add(textBoxNombre);
@@ -40,7 +44,7 @@ namespace Trilce
 
         private void PictureBoxImage(object sender, EventArgs e)
         {
-            estudiante.uploadImage.CargarImagen(pictureBoxImage);
+            librarys.uploadImage.CargarImagen(pictureBoxImage);
         }
 
 
@@ -108,17 +112,17 @@ namespace Trilce
 
         private void TextBoxApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            estudiante.textBoxEvent.TextKeyPress(e);
+            librarys.textBoxEvent.TextKeyPress(e);
         }
 
         private void TextBoxNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            estudiante.textBoxEvent.TextKeyPress(e);
+            librarys.textBoxEvent.TextKeyPress(e);
         }
 
         private void TextBoxNid_KeyPress(object sender, KeyPressEventArgs e)
         {
-            estudiante.textBoxEvent.numberKeyPress(e);
+            librarys.textBoxEvent.numberKeyPress(e);
         }
 
         private void ButtonAgregar_Click(object sender, EventArgs e)

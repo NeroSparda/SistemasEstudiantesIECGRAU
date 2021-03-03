@@ -10,7 +10,7 @@ namespace Data
 {
     public class Conexion: DataConnection
     {
-        public Conexion(): base("Prueba") { }
+        public Conexion(): base("Prueba2") { }
         public ITable<estudiante> _Estudiante { get { return GetTable<estudiante>(); } }
     }
 }
