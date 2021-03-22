@@ -155,5 +155,17 @@
       <Name>Logica</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left_double_arrow_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right_double_arrow_white_18dp - copia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_arrow_left_white_18dp -.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_arrow_right_white_18dp.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

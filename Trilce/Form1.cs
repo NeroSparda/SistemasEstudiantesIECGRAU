@@ -31,10 +31,12 @@ namespace Trilce
             listLabel.Add(labelNombre);
             listLabel.Add(labelApellido);
             listLabel.Add(labelEmail);
+            listLabel.Add(labelPaginas);
             Object[] objectos = { 
                 pictureBoxImage,
                 Properties.Resources.Logo_de_Git,
-                dataGridView1
+                dataGridView1,
+                numericUpDown1
             };
             estudiante = new LEstudiantes(listTextBox,listLabel,objectos);
         }
@@ -137,6 +139,31 @@ namespace Trilce
         private void textBoxBuscar_TextChanged(object sender, EventArgs e)
         {
             estudiante.SearchEstudiante(textBoxBuscar.Text);
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonPrimero_Click(object sender, EventArgs e)
+        {
+            estudiante.Paginador("Primero");
+        }
+
+        private void buttonAnterior_Click(object sender, EventArgs e)
+        {
+            estudiante.Paginador("Anterior");
+        }
+
+        private void buttonSiguiente_Click(object sender, EventArgs e)
+        {
+            estudiante.Paginador("Siguiente");
+        }
+
+        private void buttonUltimo_Click(object sender, EventArgs e)
+        {
+            estudiante.Paginador("Ultimo");
         }
     }
 }

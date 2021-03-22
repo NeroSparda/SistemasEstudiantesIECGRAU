@@ -18,6 +18,8 @@ namespace Logica
         private PictureBox image;
         private Bitmap _imagBitmap;
         private DataGridView _dataGridView;
+        private NumericUpDown _numericUpDown;
+        private Paginador<estudiante> _paginador;
         //private Librarys librarys;
         public LEstudiantes(List<TextBox> listTextBox, List<Label> listLabel, object[] objectos)
         {
@@ -27,6 +29,8 @@ namespace Logica
             image = (PictureBox)objectos[0];
             _imagBitmap = (Bitmap)objectos[1];
             _dataGridView = (DataGridView)objectos[2];
+            _numericUpDown = (NumericUpDown)objectos[3];
+
             Restablecer();//Vacia y muestra valores en la tabla al abrirla
         }
 
@@ -125,7 +129,7 @@ namespace Logica
 
             }
         }
-        private int _reg_por_pagina = 2, _num_pagina = 1;
+        private int _reg_por_pagina = 3, _num_pagina = 1;
         public void SearchEstudiante(String campo)
         {
             List<estudiante> query = new List<estudiante>();
@@ -167,6 +171,26 @@ namespace Logica
                 }).Skip(inicio).Take(_reg_por_pagina).ToList();
             }
         }
+        public void Paginador (string metodo)
+        {
+            switch(metodo)
+            {
+                case "Primero":
+                    _num_pagina = _paginador.primero();
+                    break;
+                case "Anterior":
+                    _num_pagina = _paginador.anterior();
+                    break;
+                case "Siguiente":
+                    _num_pagina = _paginador.siguiente();
+                    break;
+                case "Ultimo":
+                    _num_pagina = _paginador.ultimo();
+                    break;
+            }
+            SearchEstudiante("");
+        }
+        private List<estudiante> listEstudiante;
         private void Restablecer()
         {
             image.Image = _imagBitmap;
@@ -182,6 +206,11 @@ namespace Logica
             listTextBox[1].Text = "";
             listTextBox[2].Text = "";
             listTextBox[3].Text = "";
+            listEstudiante = _Estudiante.ToList();
+            if(0<listEstudiante.Count)
+            {
+                _paginador = new Paginador<estudiante>(listEstudiante, listLabel[4], _reg_por_pagina);
+            }
             SearchEstudiante("");
 
         }

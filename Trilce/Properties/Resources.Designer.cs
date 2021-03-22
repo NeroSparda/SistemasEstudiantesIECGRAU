@@ -73,6 +73,26 @@ namespace Trilce.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap baseline_arrow_left_white_18dp__ {
+            get {
+                object obj = ResourceManager.GetObject("baseline_arrow_left_white_18dp -", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap baseline_arrow_right_white_18dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_arrow_right_white_18dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap baseline_clear_white_18dp {
             get {
                 object obj = ResourceManager.GetObject("baseline_clear_white_18dp", resourceCulture);
@@ -93,9 +113,29 @@ namespace Trilce.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap left_double_arrow_white_18dp {
+            get {
+                object obj = ResourceManager.GetObject("left_double_arrow_white_18dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_de_Git {
             get {
                 object obj = ResourceManager.GetObject("Logo-de-Git", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap right_double_arrow_white_18dp___copia {
+            get {
+                object obj = ResourceManager.GetObject("right_double_arrow_white_18dp - copia", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

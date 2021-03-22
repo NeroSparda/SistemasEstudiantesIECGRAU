@@ -3,8 +3,6 @@ C:\Users\sistemas13\Desktop\Zero\grau\Data\bin\Debug\Data.pdb
 C:\Users\sistemas13\Desktop\Zero\grau\Data\bin\Debug\linq2db.dll
 C:\Users\sistemas13\Desktop\Zero\grau\Data\bin\Debug\System.ComponentModel.Annotations.dll
 C:\Users\sistemas13\Desktop\Zero\grau\Data\bin\Debug\linq2db.xml
-C:\Users\sistemas13\Desktop\Zero\grau\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
-C:\Users\sistemas13\Desktop\Zero\grau\Data\obj\Debug\Data.csproj.CopyComplete
 C:\Users\sistemas13\Desktop\Zero\grau\Data\obj\Debug\Data.dll
 C:\Users\sistemas13\Desktop\Zero\grau\Data\obj\Debug\Data.pdb
 C:\Users\sistemas13\Desktop\Zero\grau\Data\bin\Debug\Data.dll.config
@@ -32,4 +30,4 @@ C:\Users\sistemas13\Desktop\Zero\grau\Data\bin\Debug\System.Buffers.xml
 C:\Users\sistemas13\Desktop\Zero\grau\Data\bin\Debug\System.Memory.xml
 C:\Users\sistemas13\Desktop\Zero\grau\Data\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\sistemas13\Desktop\Zero\grau\Data\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\sistemas13\Desktop\Zero\grau\Data\obj\Debug\Data.csprojAssemblyReference.cache
+C:\Users\sistemas13\Desktop\Zero\grau\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
