@@ -215,7 +215,7 @@ namespace Logica
                 byte[] arrayImage = (byte[])_dataGridView.CurrentRow.Cells[5].Value;
                 image.Image = uploadImage.byteArrayToImage(arrayImage);
             }
-            catch(Exception)
+            catch (Exception)
             {
                 image.Image = _imagBitmap;
             }
@@ -267,7 +267,7 @@ namespace Logica
                 }
             }
         }
-        private void Restablecer()
+        public void Restablecer()
         {
             _accion = "insert";
             _num_pagina = 1;

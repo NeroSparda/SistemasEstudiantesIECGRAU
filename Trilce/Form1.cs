@@ -33,7 +33,7 @@ namespace Trilce
             listLabel.Add(labelEmail);
             listLabel.Add(labelPaginas);
             Object[] objectos = { 
-                pictureBoxImage,
+                pictureBoxImagen,
                 Properties.Resources.Logo_de_Git,
                 dataGridView1,
                 numericUpDown1
@@ -50,7 +50,7 @@ namespace Trilce
 
         private void PictureBoxImage(object sender, EventArgs e)
         {
-            estudiante.uploadImage.CargarImagen(pictureBoxImage);
+            estudiante.uploadImage.CargarImagen(pictureBoxImagen);
         }
 
 
@@ -168,18 +168,34 @@ namespace Trilce
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(dataGridView1.Rows.Count!=0)
-            {
-                estudiante.GetEstudiante(); 
-            }
+            if (dataGridView1.Rows.Count != 0)
+                estudiante.GetEstudiante();
         }
 
         private void dataGridView1_KeyUp(object sender, KeyEventArgs e)
         {
             if (dataGridView1.Rows.Count != 0)
-            {
                 estudiante.GetEstudiante();
-            }
+        }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            estudiante.Eliminar();
+        }
+
+        private void pictureBoxImagen_Click(object sender, EventArgs e)
+        {
+            estudiante.uploadImage.CargarImagen(pictureBoxImagen);
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            estudiante.Restablecer();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

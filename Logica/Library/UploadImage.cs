@@ -29,7 +29,6 @@ namespace Logica.Library
         }
         public Image byteArrayToImage(byte[] byteArrayIn)
         {
-            
             return Image.FromStream(new MemoryStream(byteArrayIn));
         }
     }
