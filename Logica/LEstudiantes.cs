@@ -190,6 +190,17 @@ namespace Logica
             }
             SearchEstudiante("");
         }
+        public void Registro_Paginas()
+        {
+            _num_pagina = 1;
+            _reg_por_pagina = (int)_numericUpDown.Value;
+            var list =_Estudiante.ToList();
+            if(0<list.Count)
+            {
+                _paginador = new Paginador<estudiante>(listEstudiante, listLabel[4], _reg_por_pagina);
+                SearchEstudiante("");
+            }
+        }
         private List<estudiante> listEstudiante;
         private void Restablecer()
         {

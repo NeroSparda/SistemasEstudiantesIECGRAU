@@ -143,7 +143,7 @@ namespace Trilce
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-
+            estudiante.Registro_Paginas();
         }
 
         private void buttonPrimero_Click(object sender, EventArgs e)
