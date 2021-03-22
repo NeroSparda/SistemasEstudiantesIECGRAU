@@ -91,9 +91,16 @@ namespace Logica
                                     Save();
                                 }else
                                 {
-                                    listLabel[3].Text = "Email ya registrado";
-                                    listLabel[3].ForeColor = Color.Red;
-                                    listLabel[3].Focus();
+                                    if(user[0].id.Equals(_idEstudiante))
+                                    {
+                                        Save();
+                                    }
+                                    else
+                                    {
+                                        listLabel[3].Text = "Email ya registrado";
+                                        listLabel[3].ForeColor = Color.Red;
+                                        listLabel[3].Focus();
+                                    }
                                 }
                             }
                             else
@@ -113,13 +120,27 @@ namespace Logica
             try
             {
                 var imagenArray = uploadImage.ImageToByte(image.Image);
-
-                _Estudiante.Value(e => e.nid, listTextBox[0].Text)
-                .Value(e => e.nombre, listTextBox[1].Text)
-                .Value(e => e.apellido, listTextBox[2].Text)
-                .Value(e => e.email, listTextBox[3].Text)
-                .Value(e => e.image, imagenArray)
-                .Insert();
+                switch(_accion)
+                {
+                    case "insert":
+                        _Estudiante.Value(e => e.nid, listTextBox[0].Text)
+                        .Value(e => e.nombre, listTextBox[1].Text)
+                        .Value(e => e.apellido, listTextBox[2].Text)
+                        .Value(e => e.email, listTextBox[3].Text)
+                        .Value(e => e.image, imagenArray)
+                        .Insert();
+                        break;
+                    case "update":
+                        _Estudiante.Where(u => u.id.Equals(_idEstudiante))
+                        .Set(e => e.nid, listTextBox[0].Text)
+                        .Set(e => e.nombre, listTextBox[1].Text)
+                        .Set(e => e.apellido, listTextBox[2].Text)
+                        .Set(e => e.email, listTextBox[3].Text)
+                        .Set(e => e.image, imagenArray)
+                        .Update();
+                        break;
+                }
+                
 
                 CommitTransaction();
                 Restablecer();
@@ -230,8 +251,27 @@ namespace Logica
             }
         }
         private List<estudiante> listEstudiante;
+
+        public void Eliminar()
+        {
+            if(_idEstudiante.Equals(0))
+            {
+                MessageBox.Show("Selecciona un estudiante");
+            }
+            else
+            {
+                if(MessageBox.Show("Estas seguro de eliminar el estudiante?","Eliminar estudiante",MessageBoxButtons.YesNo)==DialogResult.Yes)
+                {
+                    _Estudiante.Where(c=> c.id.Equals(_idEstudiante)).Delete();
+                    Restablecer();
+                }
+            }
+        }
         private void Restablecer()
         {
+            _accion = "insert";
+            _num_pagina = 1;
+            _idEstudiante = 0;
             image.Image = _imagBitmap;
             listLabel[0].Text = "Nid";
             listLabel[1].Text = "Nombre";
