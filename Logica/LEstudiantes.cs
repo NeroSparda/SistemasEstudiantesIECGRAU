@@ -20,6 +20,7 @@ namespace Logica
         private DataGridView _dataGridView;
         private NumericUpDown _numericUpDown;
         private Paginador<estudiante> _paginador;
+        private string _accion = "insert";
         //private Librarys librarys;
         public LEstudiantes(List<TextBox> listTextBox, List<Label> listLabel, object[] objectos)
         {
@@ -167,8 +168,35 @@ namespace Logica
                     c.nid,
                     c.nombre,
                     c.apellido,
-                    c.email
+                    c.email,
+                    c.image
                 }).Skip(inicio).Take(_reg_por_pagina).ToList();
+                _dataGridView.Columns[0].Visible = false;
+                _dataGridView.Columns[5].Visible = false;
+                _dataGridView.Columns[1].DefaultCellStyle.BackColor = Color.WhiteSmoke;
+                _dataGridView.Columns[3].DefaultCellStyle.BackColor = Color.WhiteSmoke;
+
+
+
+            }
+        }
+        private int _idEstudiante = 0;
+        public void GetEstudiante()
+        {
+            _accion = "update";
+            _idEstudiante = Convert.ToInt16(_dataGridView.CurrentRow.Cells[0].Value);
+            listTextBox[0].Text = Convert.ToString(_dataGridView.CurrentRow.Cells[1].Value);
+            listTextBox[1].Text = Convert.ToString(_dataGridView.CurrentRow.Cells[2].Value);
+            listTextBox[2].Text = Convert.ToString(_dataGridView.CurrentRow.Cells[3].Value);
+            listTextBox[3].Text = Convert.ToString(_dataGridView.CurrentRow.Cells[4].Value);
+            try
+            {
+                byte[] arrayImage = (byte[])_dataGridView.CurrentRow.Cells[5].Value;
+                image.Image = uploadImage.byteArrayToImage(arrayImage);
+            }
+            catch(Exception)
+            {
+                image.Image = _imagBitmap;
             }
         }
         public void Paginador (string metodo)
