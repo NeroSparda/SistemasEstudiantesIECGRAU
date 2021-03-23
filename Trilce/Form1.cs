@@ -34,7 +34,7 @@ namespace Trilce
             listLabel.Add(labelPaginas);
             Object[] objectos = { 
                 pictureBoxImagen,
-                Properties.Resources.Logo_de_Git,
+                Properties.Resources.coco,
                 dataGridView1,
                 numericUpDown1
             };

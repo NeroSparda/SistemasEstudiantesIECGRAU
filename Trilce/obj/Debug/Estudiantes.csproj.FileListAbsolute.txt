@@ -32,9 +32,13 @@ C:\Users\sistemas13\Desktop\Zero\grau\Trilce\bin\Debug\System.Buffers.xml
 C:\Users\sistemas13\Desktop\Zero\grau\Trilce\bin\Debug\System.Memory.xml
 C:\Users\sistemas13\Desktop\Zero\grau\Trilce\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\sistemas13\Desktop\Zero\grau\Trilce\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\sistemas13\Desktop\Zero\grau\Trilce\obj\Debug\Estudiantes.csprojResolveAssemblyReference.cache
 C:\Users\sistemas13\Desktop\Zero\grau\Trilce\obj\Debug\Trilce.Form1.resources
 C:\Users\sistemas13\Desktop\Zero\grau\Trilce\obj\Debug\Trilce.Properties.Resources.resources
 C:\Users\sistemas13\Desktop\Zero\grau\Trilce\obj\Debug\Estudiantes.csproj.GenerateResource.Cache
 C:\Users\sistemas13\Desktop\Zero\grau\Trilce\obj\Debug\Trilce.exe
 C:\Users\sistemas13\Desktop\Zero\grau\Trilce\obj\Debug\Trilce.pdb
+C:\Users\sistemas13\Desktop\Zero\grau\Trilce\bin\Debug\Data.dll.config
+C:\Users\sistemas13\Desktop\Zero\grau\Trilce\bin\Debug\Logica.dll.config
+C:\Users\sistemas13\Desktop\Zero\grau\Trilce\obj\Debug\Estudiantes.csprojAssemblyReference.cache
+C:\Users\sistemas13\Desktop\Zero\grau\Trilce\obj\Debug\Estudiantes.csproj.CoreCompileInputs.cache
+C:\Users\sistemas13\Desktop\Zero\grau\Trilce\obj\Debug\Estudiantes.csproj.CopyComplete

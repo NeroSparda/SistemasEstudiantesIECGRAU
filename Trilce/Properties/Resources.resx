@@ -133,16 +133,22 @@
   <data name="baseline_delete_forever_white_18dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\baseline_delete_forever_white_18dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="descarga" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\descarga.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="left_double_arrow_white_18dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\left_double_arrow_white_18dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="baseline_arrow_right_white_18dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\baseline_arrow_right_white_18dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="baseline_add_white_18dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\baseline_add_white_18dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="left_double_arrow_white_18dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\left_double_arrow_white_18dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coco.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

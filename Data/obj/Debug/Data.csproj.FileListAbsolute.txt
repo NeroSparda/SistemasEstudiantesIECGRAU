@@ -30,3 +30,6 @@ C:\Users\sistemas13\Desktop\Zero\grau\Data\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\sistemas13\Desktop\Zero\grau\Data\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\sistemas13\Desktop\Zero\grau\Data\obj\Debug\Data.dll
 C:\Users\sistemas13\Desktop\Zero\grau\Data\obj\Debug\Data.pdb
+C:\Users\sistemas13\Desktop\Zero\grau\Data\obj\Debug\Data.csprojAssemblyReference.cache
+C:\Users\sistemas13\Desktop\Zero\grau\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+C:\Users\sistemas13\Desktop\Zero\grau\Data\obj\Debug\Data.csproj.CopyComplete

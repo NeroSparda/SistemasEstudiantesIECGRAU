@@ -29,16 +29,13 @@ namespace Trilce
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pictureBoxImagen = new System.Windows.Forms.PictureBox();
             this.textBoxApellido = new System.Windows.Forms.TextBox();
             this.textBoxId = new System.Windows.Forms.TextBox();
-            this.buttonEliminar = new System.Windows.Forms.Button();
-            this.buttonCancelar = new System.Windows.Forms.Button();
-            this.buttonAgregar = new System.Windows.Forms.Button();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.labelEmail = new System.Windows.Forms.Label();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
@@ -50,31 +47,38 @@ namespace Trilce
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.labelPaginas = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.buttonUltimo = new System.Windows.Forms.Button();
-            this.buttonSiguiente = new System.Windows.Forms.Button();
-            this.buttonAnterior = new System.Windows.Forms.Button();
-            this.buttonPrimero = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttonUltimo = new System.Windows.Forms.Button();
+            this.buttonSiguiente = new System.Windows.Forms.Button();
+            this.buttonAnterior = new System.Windows.Forms.Button();
+            this.buttonPrimero = new System.Windows.Forms.Button();
+            this.buttonEliminar = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.buttonAgregar = new System.Windows.Forms.Button();
+            this.pictureBoxImagen = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagen)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.BackColor = System.Drawing.Color.MediumBlue;
+            this.groupBox1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(0, -9);
             this.groupBox1.Name = "groupBox1";
@@ -102,7 +106,7 @@ namespace Trilce
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.BackColor = System.Drawing.Color.MidnightBlue;
             this.groupBox2.Controls.Add(this.textBoxApellido);
             this.groupBox2.Controls.Add(this.textBoxId);
             this.groupBox2.Controls.Add(this.buttonEliminar);
@@ -121,17 +125,6 @@ namespace Trilce
             this.groupBox2.Size = new System.Drawing.Size(337, 564);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            // 
-            // pictureBoxImagen
-            // 
-            this.pictureBoxImagen.Image = global::Trilce.Properties.Resources.logo;
-            this.pictureBoxImagen.Location = new System.Drawing.Point(14, 9);
-            this.pictureBoxImagen.Name = "pictureBoxImagen";
-            this.pictureBoxImagen.Size = new System.Drawing.Size(109, 106);
-            this.pictureBoxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxImagen.TabIndex = 15;
-            this.pictureBoxImagen.TabStop = false;
-            this.pictureBoxImagen.Click += new System.EventHandler(this.pictureBoxImagen_Click);
             // 
             // textBoxApellido
             // 
@@ -153,40 +146,6 @@ namespace Trilce
             this.textBoxId.TextChanged += new System.EventHandler(this.TextBoxNid_TextChanged);
             this.textBoxId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxNid_KeyPress);
             // 
-            // buttonEliminar
-            // 
-            this.buttonEliminar.BackColor = System.Drawing.Color.SteelBlue;
-            this.buttonEliminar.Image = global::Trilce.Properties.Resources.baseline_delete_forever_white_18dp;
-            this.buttonEliminar.Location = new System.Drawing.Point(118, 331);
-            this.buttonEliminar.Name = "buttonEliminar";
-            this.buttonEliminar.Size = new System.Drawing.Size(84, 42);
-            this.buttonEliminar.TabIndex = 12;
-            this.buttonEliminar.UseVisualStyleBackColor = false;
-            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
-            // 
-            // buttonCancelar
-            // 
-            this.buttonCancelar.BackColor = System.Drawing.Color.SteelBlue;
-            this.buttonCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCancelar.Image = global::Trilce.Properties.Resources.baseline_clear_white_18dp;
-            this.buttonCancelar.Location = new System.Drawing.Point(228, 331);
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(84, 42);
-            this.buttonCancelar.TabIndex = 11;
-            this.buttonCancelar.UseVisualStyleBackColor = false;
-            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
-            // 
-            // buttonAgregar
-            // 
-            this.buttonAgregar.BackColor = System.Drawing.Color.SteelBlue;
-            this.buttonAgregar.Image = global::Trilce.Properties.Resources.baseline_add_white_18dp;
-            this.buttonAgregar.Location = new System.Drawing.Point(9, 331);
-            this.buttonAgregar.Name = "buttonAgregar";
-            this.buttonAgregar.Size = new System.Drawing.Size(84, 42);
-            this.buttonAgregar.TabIndex = 10;
-            this.buttonAgregar.UseVisualStyleBackColor = false;
-            this.buttonAgregar.Click += new System.EventHandler(this.ButtonAgregar_Click);
-            // 
             // textBoxEmail
             // 
             this.textBoxEmail.Location = new System.Drawing.Point(170, 273);
@@ -200,7 +159,7 @@ namespace Trilce
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
-            this.labelEmail.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelEmail.ForeColor = System.Drawing.Color.White;
             this.labelEmail.Location = new System.Drawing.Point(170, 257);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(32, 13);
@@ -220,7 +179,7 @@ namespace Trilce
             // labelNombre
             // 
             this.labelNombre.AutoSize = true;
-            this.labelNombre.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelNombre.ForeColor = System.Drawing.Color.White;
             this.labelNombre.Location = new System.Drawing.Point(170, 210);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(44, 13);
@@ -230,7 +189,7 @@ namespace Trilce
             // labelApellido
             // 
             this.labelApellido.AutoSize = true;
-            this.labelApellido.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelApellido.ForeColor = System.Drawing.Color.White;
             this.labelApellido.Location = new System.Drawing.Point(6, 257);
             this.labelApellido.Name = "labelApellido";
             this.labelApellido.Size = new System.Drawing.Size(44, 13);
@@ -240,7 +199,7 @@ namespace Trilce
             // labelNid
             // 
             this.labelNid.AutoSize = true;
-            this.labelNid.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelNid.ForeColor = System.Drawing.Color.White;
             this.labelNid.Location = new System.Drawing.Point(6, 210);
             this.labelNid.Name = "labelNid";
             this.labelNid.Size = new System.Drawing.Size(23, 13);
@@ -259,7 +218,7 @@ namespace Trilce
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(86, 27);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 13);
@@ -271,7 +230,7 @@ namespace Trilce
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.BackColor = System.Drawing.Color.MidnightBlue;
             this.groupBox3.Controls.Add(this.labelPaginas);
             this.groupBox3.Controls.Add(this.numericUpDown1);
             this.groupBox3.Controls.Add(this.buttonUltimo);
@@ -289,6 +248,7 @@ namespace Trilce
             // labelPaginas
             // 
             this.labelPaginas.AutoSize = true;
+            this.labelPaginas.ForeColor = System.Drawing.Color.White;
             this.labelPaginas.Location = new System.Drawing.Point(300, 413);
             this.labelPaginas.Name = "labelPaginas";
             this.labelPaginas.Size = new System.Drawing.Size(40, 13);
@@ -307,6 +267,85 @@ namespace Trilce
             0,
             0});
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(16, 58);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(602, 348);
+            this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyUp);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(273, 27);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(102, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Lista de Estudiantes";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.BackColor = System.Drawing.Color.White;
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.textBoxBuscar);
+            this.groupBox4.Controls.Add(this.label2);
+            this.groupBox4.Location = new System.Drawing.Point(12, 64);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(971, 80);
+            this.groupBox4.TabIndex = 0;
+            this.groupBox4.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.Location = new System.Drawing.Point(84, 28);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(115, 27);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Estudiante";
+            // 
+            // textBoxBuscar
+            // 
+            this.textBoxBuscar.Location = new System.Drawing.Point(552, 35);
+            this.textBoxBuscar.Multiline = true;
+            this.textBoxBuscar.Name = "textBoxBuscar";
+            this.textBoxBuscar.Size = new System.Drawing.Size(144, 20);
+            this.textBoxBuscar.TabIndex = 1;
+            this.textBoxBuscar.TextChanged += new System.EventHandler(this.textBoxBuscar_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(486, 35);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 21);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Buscar";
             // 
             // buttonUltimo
             // 
@@ -352,84 +391,60 @@ namespace Trilce
             this.buttonPrimero.UseVisualStyleBackColor = false;
             this.buttonPrimero.Click += new System.EventHandler(this.buttonPrimero_Click);
             // 
-            // dataGridView1
+            // buttonEliminar
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 58);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(602, 348);
-            this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyUp);
+            this.buttonEliminar.BackColor = System.Drawing.Color.SteelBlue;
+            this.buttonEliminar.Image = global::Trilce.Properties.Resources.baseline_delete_forever_white_18dp;
+            this.buttonEliminar.Location = new System.Drawing.Point(118, 331);
+            this.buttonEliminar.Name = "buttonEliminar";
+            this.buttonEliminar.Size = new System.Drawing.Size(84, 42);
+            this.buttonEliminar.TabIndex = 12;
+            this.buttonEliminar.UseVisualStyleBackColor = false;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
-            // label4
+            // buttonCancelar
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label4.Location = new System.Drawing.Point(273, 27);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Lista de Estudiantes";
+            this.buttonCancelar.BackColor = System.Drawing.Color.SteelBlue;
+            this.buttonCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCancelar.Image = global::Trilce.Properties.Resources.baseline_clear_white_18dp;
+            this.buttonCancelar.Location = new System.Drawing.Point(228, 331);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(84, 42);
+            this.buttonCancelar.TabIndex = 11;
+            this.buttonCancelar.UseVisualStyleBackColor = false;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
-            // groupBox4
+            // buttonAgregar
             // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.BackColor = System.Drawing.Color.White;
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.textBoxBuscar);
-            this.groupBox4.Controls.Add(this.label2);
-            this.groupBox4.Location = new System.Drawing.Point(12, 64);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(971, 80);
-            this.groupBox4.TabIndex = 0;
-            this.groupBox4.TabStop = false;
+            this.buttonAgregar.BackColor = System.Drawing.Color.SteelBlue;
+            this.buttonAgregar.Image = global::Trilce.Properties.Resources.baseline_add_white_18dp;
+            this.buttonAgregar.Location = new System.Drawing.Point(9, 331);
+            this.buttonAgregar.Name = "buttonAgregar";
+            this.buttonAgregar.Size = new System.Drawing.Size(84, 42);
+            this.buttonAgregar.TabIndex = 10;
+            this.buttonAgregar.UseVisualStyleBackColor = false;
+            this.buttonAgregar.Click += new System.EventHandler(this.ButtonAgregar_Click);
             // 
-            // label9
+            // pictureBoxImagen
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label9.Location = new System.Drawing.Point(84, 28);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(115, 27);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Estudiante";
+            this.pictureBoxImagen.Image = global::Trilce.Properties.Resources.coco;
+            this.pictureBoxImagen.Location = new System.Drawing.Point(14, 9);
+            this.pictureBoxImagen.Name = "pictureBoxImagen";
+            this.pictureBoxImagen.Size = new System.Drawing.Size(109, 106);
+            this.pictureBoxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxImagen.TabIndex = 15;
+            this.pictureBoxImagen.TabStop = false;
+            this.pictureBoxImagen.Click += new System.EventHandler(this.pictureBoxImagen_Click);
             // 
-            // textBoxBuscar
+            // pictureBox1
             // 
-            this.textBoxBuscar.Location = new System.Drawing.Point(552, 35);
-            this.textBoxBuscar.Multiline = true;
-            this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(144, 20);
-            this.textBoxBuscar.TabIndex = 1;
-            this.textBoxBuscar.TextChanged += new System.EventHandler(this.textBoxBuscar_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(486, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 21);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Buscar";
+            this.pictureBox1.Image = global::Trilce.Properties.Resources.descarga;
+            this.pictureBox1.Location = new System.Drawing.Point(254, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 56);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
@@ -441,15 +456,15 @@ namespace Trilce
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sistema de Estudiantes";
+            this.Text = "Sistema de Estudiantes IEC.MIGUEL GRAU";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagen)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -457,6 +472,8 @@ namespace Trilce
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -493,6 +510,7 @@ namespace Trilce
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label labelPaginas;
         private System.Windows.Forms.PictureBox pictureBoxImagen;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
